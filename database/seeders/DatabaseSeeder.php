@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
 
         $products = \App\Models\Product::factory(10)->create();
 
-        \App\Models\Order::factory(5)->create()->each(function ($order) use ($products) {
+        \App\Models\Order::factory(50)->create()->each(function ($order) use ($products) {
             $order->products()->attach($products, ['quantity' => rand(1, 3)]);
         });
 

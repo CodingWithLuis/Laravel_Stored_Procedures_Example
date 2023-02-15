@@ -19,7 +19,7 @@ class OrderFactory extends Factory
         return [
             'order_number' => rand(1000, 9999),
             'customer_id' => rand(1, 10),
-            'status' => fake()->randomElement(['pendiente', 'cancelada', 'finalizada']),
+            'status' => fake()->randomElement(['PENDING', 'CANCELLED', 'COMPLETED']),
         ];
     }
 }
